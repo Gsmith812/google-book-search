@@ -1,0 +1,9 @@
+.filters {
+    text-align: center;
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+select#printType {
+    margin-right: 30px;
+}
