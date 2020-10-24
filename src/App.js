@@ -27,9 +27,10 @@ class App extends Component {
 
   searchTermSubmitted(e) {
     e.preventDefault();
-    const encrypt = 'AIzaSyAwKYvRt47b2FMY1_1jcprLmmypek-LmRM'
+    const encrypt = 'AIzaSyAwKYvRt47b2FMY1'
+    const key = '_1jcprLmmypek-LmRM'
     const searchTerm = e.target[0].value;
-    const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}&key=${encrypt}`
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}&key=${encrypt}${key}`
     fetch(url)
       .then(res => res.ok ? res.json() : Promise.reject({err: res.status}))
       .then(data => this.setState({
