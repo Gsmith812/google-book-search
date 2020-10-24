@@ -1,0 +1,16 @@
+.bookItem h2 {
+    text-align: center;
+}
+
+.bookItem .container {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.thumbImg {
+    margin-right: 30px;
+}
+
+

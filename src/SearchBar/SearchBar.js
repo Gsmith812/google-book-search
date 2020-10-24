@@ -7,8 +7,11 @@ class SearchBar extends Component {
     render() {
         return (
             <section className='searchBar'>
-                <SearchBox />
-                <Filters />
+                <SearchBox handleSubmit={this.props.handleSubmit} />
+                <Filters 
+                    handlePrintType={this.props.handlePrintType}
+                    handleBookType={this.props.handleBookType}
+                />
             </section>
         );
     }

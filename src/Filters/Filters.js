@@ -6,17 +6,17 @@ class Filters extends Component {
         return (
             <form className='filters'>
                 <label htmlFor='printType'>Print Type:</label>
-                <select id='printType' name='printType'>
-                    <option value='all'>All</option>
-                    <option value='books'>Books</option>
-                    <option value='magazines'>Magazines</option>
+                <select id='printType' name='printType' onChange={e => this.props.handlePrintType(e.target.value)}>
+                    <option value='ALL'>All</option>
+                    <option value='BOOK'>Books</option>
+                    <option value='MAGAZINE'>Magazines</option>
                 </select>
                 <label htmlFor='bookType'>Book Type:</label>
-                <select id='bookType' name='bookType'>
-                    <option value='None'>No Filter</option>
-                    <option value='free-ebooks'>All Free eBooks</option>
-                    <option value='paid-ebooks'>All Paid eBooks</option>
-                    <option value='ebooks'>All eBooks</option>
+                <select id='bookType' name='bookType' onChange={e => this.props.handleBookType(e.target.value)}>
+                    <option value='ALL'>No Filter</option>
+                    <option value='Free-eBooks'>All Free eBooks</option>
+                    <option value='Paid-eBooks'>All Paid eBooks</option>
+                    <option value='eBooks'>All eBooks</option>
                 </select>
             </form>
         );
